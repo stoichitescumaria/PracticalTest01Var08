@@ -32,6 +32,11 @@ public class PracticalTest01Var08MainActivity extends AppCompatActivity {
                     intent.putExtra("answer", answer);
                     startActivityForResult(intent, 1);
                 }
+                if(answer != null) {
+                   Intent intent = new Intent(getApplicationContext(), PracticalTest01Var08Service.class);
+                     intent.putExtra("answer", answer);
+                     getApplicationContext().startService(intent);
+                }
             }
         });
     }
